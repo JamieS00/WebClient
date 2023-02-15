@@ -8,18 +8,47 @@ namespace WebClient // Note: actual namespace depends on the project name.
 {
     class Car
     {
-        [JsonProperty("Make_ID")]
-        public string Make_ID { get; set; }
+        [JsonProperty("id")]
+        public int Make_ID { get; set; }
 
-        [JsonProperty("Make_Name")]
+        [JsonProperty("name")]
         public string Make_Name { get; set; }
 
-        [JsonProperty("Model_ID")]
-        public string Model_ID { get; set; }
+        [JsonProperty("modelID")]
+        public int Model_ID { get; set; }
 
+        [JsonProperty("modelName")]
+        public string Model_Name { get; set; }
+
+        public List<Types> Types { get; set; }
+    }
+
+    public class Type
+    {
+        [JsonProperty("id")]
+        public int Make_ID { get; set; }
+    }
+
+    public class Types
+    {
+        [JsonProperty("name")]
+        public string Make_Name { get; set; }
+    }
+
+    public class Types
+    {
+        [JsonProperty("Model_ID")]
+        public int Model_ID { get; set; }
+    }
+
+    public class Types
+    {
         [JsonProperty("Model_Name")]
         public string Model_Name { get; set; }
     }
+
+
+
 
     internal class Program
     {
