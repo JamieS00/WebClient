@@ -17,35 +17,24 @@ namespace WebClient // Note: actual namespace depends on the project name.
         [JsonProperty("modelID")]
         public int Model_ID { get; set; }
 
-        [JsonProperty("modelName")]
-        public string Model_Name { get; set; }
 
         public List<Types> Types { get; set; }
     }
 
-    public class Type
+    public class Types
     {
         [JsonProperty("id")]
         public int Make_ID { get; set; }
-    }
-
-    public class Types
-    {
+    
         [JsonProperty("name")]
         public string Make_Name { get; set; }
-    }
+    
 
-    public class Types
-    {
         [JsonProperty("Model_ID")]
         public int Model_ID { get; set; }
     }
 
-    public class Types
-    {
-        [JsonProperty("Model_Name")]
-        public string Model_Name { get; set; }
-    }
+    
 
 
 
@@ -76,9 +65,9 @@ namespace WebClient // Note: actual namespace depends on the project name.
                 {
                     Console.WriteLine("Enter name. If you press Enter without writing the program will exit.");
 
-                    var carname = Console.ReadLine();
+                    var carName = Console.ReadLine();
 
-                    if (string.IsNullOrEmpty(carname))
+                    if (string.IsNullOrEmpty(carName))
                     {
                         break;
                     }
@@ -86,7 +75,18 @@ namespace WebClient // Note: actual namespace depends on the project name.
                     /*if user enters correct name
                      - GetAsync: makes youra API calls w/ user input*/
                     var result = await client.GetAsync("https://vpic.nhtsa.dot.gov/api//vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015?format=csv");
-                    var resultRead = await result.Content.ReadAsByteArrayAsync();
+                    var resultRead = await result.Content.ReadAsStringAsync();
+
+                    var car = JsonConvert.DeserializeObject<Car>(resultRead);
+
+                    //display results 
+                    Console.WriteLine("-------");
+                    Console.WriteLine("Car #" + car.Make_ID);
+                    Console.WriteLine("Name:" + car.Make_Name);
+                    Console.WriteLine("Model ID:" + car.Model_ID);
+                    Console.WriteLine("Type(s):");
+                    car.Types.ForEach(t => Console.WriteLine(" " + t.Type.Make_Name));
+                    Console.WriteLine("\n------");
 
                 }
                 //user eneter incorrect car name 
