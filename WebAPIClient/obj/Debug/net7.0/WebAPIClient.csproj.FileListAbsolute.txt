@@ -1,0 +1,15 @@
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/WebAPIClient
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/WebAPIClient.deps.json
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/WebAPIClient.runtimeconfig.json
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/WebAPIClient.dll
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/WebAPIClient.pdb
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.csproj.AssemblyReference.cache
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.AssemblyInfoInputs.cache
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.AssemblyInfo.cs
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.csproj.CoreCompileInputs.cache
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.dll
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/refint/WebAPIClient.dll
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.pdb
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.genruntimeconfig.cache
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/ref/WebAPIClient.dll
