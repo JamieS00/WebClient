@@ -6,6 +6,21 @@ using System.Collections.Generic;
 
 namespace WebClient // Note: actual namespace depends on the project name.
 {
+    class Car
+    {
+        [JsonProperty("Make_ID")]
+        public string Make_ID { get; set; }
+
+        [JsonProperty("Make_Name")]
+        public string Make_Name { get; set; }
+
+        [JsonProperty("Model_ID")]
+        public string Model_ID { get; set; }
+
+        [JsonProperty("Model_Name")]
+        public string Model_Name { get; set; }
+    }
+
     internal class Program
     {
         //so we can send/recieve Http responses from a resource identified by URL
@@ -38,6 +53,12 @@ namespace WebClient // Note: actual namespace depends on the project name.
                     {
                         break;
                     }
+
+                    /*if user enters correct name
+                     - GetAsync: makes youra API calls w/ user input*/
+                    var result = await client.GetAsync("https://vpic.nhtsa.dot.gov/api//vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015?format=csv");
+                    var resultRead = await result.Content.ReadAsByteArrayAsync();
+
                 }
                 //user eneter incorrect car name 
                 catch (Exception)
@@ -45,9 +66,7 @@ namespace WebClient // Note: actual namespace depends on the project name.
                     Console.WriteLine("ERROR. Please enter a valid Car Name!");
                 }
 
-                //user enters correct name
-                var result = await client.GetAsync("https://vpic.nhtsa.dot.gov/api/");
-                var resultRead = await result.Content.ReadAsByteArrayAsync();
+                
 
 
                
