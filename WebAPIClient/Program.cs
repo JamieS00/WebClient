@@ -20,23 +20,30 @@ namespace WebClient // Note: actual namespace depends on the project name.
 
         public List<Types> Types { get; set; }
     }
-
-    public class Types
+    public class Type
     {
+
         [JsonProperty("id")]
         public int Make_ID { get; set; }
-    
+
+
         [JsonProperty("name")]
         public string Make_Name { get; set; }
-    
+
 
         [JsonProperty("Model_ID")]
         public int Model_ID { get; set; }
+
+
     }
 
-    
+    public class Types
+    {
 
+        [JsonProperty("type")]
+        public Type Type;
 
+    }
 
 
     internal class Program

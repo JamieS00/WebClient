@@ -13,3 +13,5 @@
 /Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.pdb
 /Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.genruntimeconfig.cache
 /Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/ref/WebAPIClient.dll
+/Users/Jamie/Desktop/WebClient/WebAPIClient/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/Jamie/Desktop/WebClient/WebAPIClient/obj/Debug/net7.0/WebAPIClient.csproj.CopyComplete
