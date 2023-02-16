@@ -70,7 +70,7 @@ namespace WebClient // Note: actual namespace depends on the project name.
             {
                 try
                 {
-                    Console.WriteLine("Enter name. If you press Enter without writing the program will exit.");
+                    Console.WriteLine("Enter name, If you press Enter without writing the program will exit.");
 
                     var carName = Console.ReadLine();
 
@@ -81,7 +81,8 @@ namespace WebClient // Note: actual namespace depends on the project name.
 
                     /*if user enters correct name
                      - GetAsync: makes youra API calls w/ user input*/
-                    var result = await client.GetAsync("https://vpic.nhtsa.dot.gov/api//vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015?format=csv");
+                    var result = await client.GetAsync("https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/474/modelyear/2015?format=json");
+                                                    
                     var resultRead = await result.Content.ReadAsStringAsync();
 
                     var car = JsonConvert.DeserializeObject<Car>(resultRead);
